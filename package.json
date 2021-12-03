@@ -1,0 +1,21 @@
+{
+  "name": "aoc-2021",
+  "version": "1.0.0",
+  "description": "this is my work for the 2021 Advent of Code",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
+  },
+  "keywords": [
+    "advent",
+    "code",
+    "aoc2021"
+  ],
+  "author": "bobse",
+  "license": "ISC",
+  "dependencies": {
+    "graceful-fs": "^4.2.8"
+  }
+}
