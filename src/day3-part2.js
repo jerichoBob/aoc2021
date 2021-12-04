@@ -147,6 +147,10 @@ const day3_part2 = () => {
 	 * O2 Gen Rate (bits):    111101010001     O2 Gen Rate (Decimal):    3921
 	 * CO2 Scrub Rate (bits): 001101001011     CO2 Scrub Rate (Decimal): 843
 	 * Life Support Rating: 3305403
+	 * ================ Life Support Rating =================
+	 * O2 Gen Rate (bits):    111101010001     O2 Gen Rate (Decimal):    3921
+	 * CO2 Scrub Rate (bits): 001101000100     CO2 Scrub Rate (Decimal): 836
+	 * Life Support Rating: 3277956  <<<<<< finally, the right answer!
 	 */
 }  
 
