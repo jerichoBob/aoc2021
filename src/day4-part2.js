@@ -116,7 +116,7 @@ const boardMarkIfSolved = (number, nindex) => {
 		if(!board.solved) {
 			// see if there is any row solution yet
 			for (let row=0;row<5;row++) {
-				if (board.pos[row][0].sel && board.pos[row][1].sel && board.pos[row][2].sel && board.pos[row][3].sel && board.pos[row][3].sel) {
+				if (board.pos[row][0].sel && board.pos[row][1].sel && board.pos[row][2].sel && board.pos[row][3].sel && board.pos[row][4].sel) {
 					board.solved = true;
 					board.solved_order = board_solution_order++;
 					board.solved_number = number;
@@ -181,11 +181,14 @@ const day4_part2 = () => {
 	numbers.forEach((number, nindex) => {
 		// console.log("===============================");
 		console.log(`The ${ith(nindex)} number to call is: ${number}`);
-		boards.forEach(board => {
+		boards.forEach((board,nindex) => {
 			if (!board.solved) {
 				board.pos.forEach(row => {
 					row.forEach(cell => {
-						if (cell.val == parseInt(number)) cell.sel = true;
+						if (cell.val == parseInt(number)) {
+							cell.sel = true;
+							// boardDisplayBoard(board, nindex);
+						}
 					});
 				});
 			}
@@ -194,7 +197,7 @@ const day4_part2 = () => {
 		boardMarkIfSolved(number, nindex);
 	});
 
-	boardDisplayAllBoards();
+	// boardDisplayAllBoards();
 
 	// boards.forEach((board,index) => {
 	// 	console.log(`board[${index}].solved_order: ${board.solved_order}`);
@@ -209,8 +212,12 @@ const day4_part2 = () => {
 		console.log(`>>>>>>>>>>>>>>>>>> score: ${score} <<<<<<<<<<<<<<<<<<<<<<<`);
 	});
 
-	// let score = boardScoreBoard(boards[last_solved_board_index], winning_number);
-	// console.log(`score: ${score} <<<<<<<<<<<<<<<<<<<<<<<`);
+	boards.filter(board => board.solved===false).forEach(board => {
+		console.log(`The unsolved board is board:`);
+		boardDisplayBoard(board, board.board_number);
+	});
+
+
 }  
 
 export default day4_part2;
