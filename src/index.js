@@ -7,7 +7,8 @@
 // import test from './day4-part1.js';
 // import test from './day4-part2.js';
 // import test from './day5-part1.js';
+// import test from './day5-part2.js';
 
-import test from './day5-part2.js';
+import test from './day6-part1.js';
 
 test();
