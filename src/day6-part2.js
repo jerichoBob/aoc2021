@@ -39,7 +39,7 @@
 import fs from 'graceful-fs';
 
 let count = 0;
-const day6_part1 = () => {
+const day6_part2 = () => {
 	console.log("day6 part1 exercise");
 	var base = process.env.PWD;
 	let file;
@@ -69,5 +69,5 @@ const day6_part1 = () => {
 	}
 }  
 
-export default day6_part1;
+export default day6_part2;
 
