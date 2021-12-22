@@ -19,10 +19,10 @@ const day6_part1 = () => {
 		file = fs.readFileSync(base + '/src/day6-input.txt', 'utf8');
 	}
 	let fish_timer_list = file.split(',');
-	const iteration_count = 80;
+	const iteration_count = 256;
 	for (let iteration = 0; iteration <= iteration_count; iteration++) {
 		count = fish_timer_list.length;
-		// console.log(`${iteration}::  ${count} ::: ${fish_timer_list}`);
+		console.log(`${iteration}::  ${count}`);
 		let additions = [];
 		for (let ndx = 0; ndx < fish_timer_list.length; ndx++) {
 			fish_timer_list[ndx]--;
