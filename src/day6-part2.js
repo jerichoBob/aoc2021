@@ -50,7 +50,7 @@ const day6_part1 = () => {
 		file = fs.readFileSync(base + '/src/day6-input.txt', 'utf8');
 	}
 	const timer = [0,96,54,48,51,51,0,0,0];
-	const iteration_count = 500;
+	const iteration_count = 256;
 	for (let iteration = 1; iteration <= iteration_count; iteration++) {
 		// save off the oth element (to be used later)
 		const zeroth_element = timer[0];
@@ -67,27 +67,6 @@ const day6_part1 = () => {
 		console.dir(timer);
 		console.log(`iteration ${iteration} count ${cnt}`);
 	}
-
-	// let fish_timer_list = file.split(',');
-	// const iteration_count = 10;
-	// for (let iteration = 0; iteration <= iteration_count; iteration++) {
-	// 	count = fish_timer_list.length;
-	// 	console.log(`${iteration}::  ${count}`);
-	// 	let additions = [];
-	// 	for (let ndx = 0; ndx < fish_timer_list.length; ndx++) {
-	// 		fish_timer_list[ndx]--;
-	// 		if (fish_timer_list[ndx] < 0) {
-	// 			fish_timer_list[ndx] = 6;
-	// 			additions.push(8);
-	// 		}
-	// 	}
-	// 	if (iteration < iteration_count) fish_timer_list = fish_timer_list.concat(additions);
-		
-	// }
-	// count = fish_timer_list.length;
-	// console.log(`# of fish: ${count}`);
-	// 
-
 }  
 
 export default day6_part1;
